@@ -42,7 +42,7 @@ UC_MODEL_NAME = f"{UC_CATALOG}.{UC_SCHEMA}.{RAG_APP_NAME}"
 
 # Vector Search endpoint where index is loaded
 # If this does not exist, it will be created
-VECTOR_SEARCH_ENDPOINT = f'{user_name}_vector_search'
+VECTOR_SEARCH_ENDPOINT = f'{user_name}_vector_search1'
 
 # Source location for documents
 # You need to create this location and add files

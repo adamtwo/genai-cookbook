@@ -115,3 +115,7 @@ if sum([VECTOR_SEARCH_ENDPOINT == ve.name for ve in vector_search_endpoints]) ==
 w.vector_search_endpoints.wait_get_endpoint_vector_search_endpoint_online(VECTOR_SEARCH_ENDPOINT)
 
 print(f"PASS: Vector Search endpoint `{VECTOR_SEARCH_ENDPOINT}` exists")
+
+# COMMAND ----------
+
+

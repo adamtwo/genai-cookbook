@@ -67,7 +67,7 @@ chain_input = {
     "messages": [
         {
             "role": "user",
-            "content": "What is RAG?", # Replace with a question relevant to your use case
+            "content": "How many years has Adam Tworkiewicz worked as director of product management? Assume he has held this role till now. It's September 2024", # Replace with a question relevant to your use case
         }
     ]
 }
@@ -116,7 +116,7 @@ uc_registered_model_info = mlflow.register_model(model_uri=logged_chain_info.mod
 deployment_info = agents.deploy(model_name=UC_MODEL_NAME, model_version=uc_registered_model_info.version)
 
 browser_url = mlflow.utils.databricks_utils.get_browser_hostname()
-print(f"\n\nView deployment status: https://{browser_url}/ml/endpoints/{deployment_info.endpoint_name}")
+print(f"\n\nView deployment status: {browser_url}/ml/endpoints/{deployment_info.endpoint_name}")
 
 # Add the user-facing instructions to the Review App
 agents.set_review_instructions(UC_MODEL_NAME, instructions_to_reviewer)
@@ -162,3 +162,7 @@ active_deployments = agents.list_deployments()
 active_deployment = next((item for item in active_deployments if item.model_name == UC_MODEL_NAME), None)
 
 print(f"Review App URL: {active_deployment.review_app_url}")
+
+# COMMAND ----------
+
+

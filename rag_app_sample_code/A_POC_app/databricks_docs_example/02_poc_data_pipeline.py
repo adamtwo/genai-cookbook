@@ -91,7 +91,7 @@ mlflow.log_dict(data_pipeline_config, "data_pipeline_config.json")
 raw_files_df = (
     spark.read.format("binaryFile")
     .option("recursiveFileLookup", "true")
-    .option("pathGlobFilter", f"*.{pipeline_config.get('file_format')}")
+    .option("pathGlobFilter", f"*.pdf")
     .load(SOURCE_PATH)
 )
 
